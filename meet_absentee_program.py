@@ -13,14 +13,7 @@ def tkinter_window():
 	root.title("Choose Your CSV File")
 	root.filename=filedialog.askopenfilename(initialdir=path, title="Select A File")
 	return root.filename
-'''def file1():
-	l = []
-	f = open("/home/sam/Desktop/experimentation/story.txt", "r")
-	for i in f:
-		l.append(i)
 
-	print(l)
-'''
 
 def csv():
 	data = pd.read_csv(tkinter_window())
@@ -28,8 +21,6 @@ def csv():
 	names=data["Participants"].tolist()
 	return names
 
-def logic():
-	pass
 
 def excel():
 
@@ -53,7 +44,4 @@ def excel():
 
 	wb.save("11_B.xlsx")
 
-
-x=csv()
-for i in x:
-	print(i)
+excel()
